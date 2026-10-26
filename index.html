@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jiayi Shen｜医疗与科技投资</title>
+<style>
+:root{
+  --paper:#F5F7F6; --ink:#17302B; --muted:#5D6D68; --rule:#D5DED9;
+  --accent:#1F7A6D; --band:#DFEDE8; --surface:#FFFFFF;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1917; --ink:#E4ECE9; --muted:#9AABA5; --rule:#2A3936;
+    --accent:#5EC3B2; --band:#1B2C28; --surface:#15221F;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1917; --ink:#E4ECE9; --muted:#9AABA5; --rule:#2A3936;
+  --accent:#5EC3B2; --band:#1B2C28; --surface:#15221F;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",system-ui,sans-serif;
+  font-size:16px; line-height:1.8; -webkit-text-size-adjust:100%;
+  font-variant-numeric:tabular-nums;
+}
+.serif{font-family:"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC","SimSun",serif}
+main{max-width:46rem; margin:0 auto; padding:3.5rem 1.5rem 4rem}
+a{color:var(--accent); text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+/* Hero */
+.name{font-size:2.6rem; line-height:1.2; margin:0; font-weight:700; letter-spacing:.01em}
+.lede{font-size:1.2rem; line-height:1.7; margin:.9rem 0 0; max-width:34em}
+.trace{margin:2.2rem 0 .4rem; width:100%; height:auto; display:block}
+.trace .band{fill:var(--band)}
+.trace .line{fill:none; stroke:var(--accent); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round}
+.trace .dot{fill:var(--paper); stroke:var(--accent); stroke-width:2.5}
+.trace text{fill:var(--ink); font-size:14px}
+.trace .yr{fill:var(--muted); font-size:12.5px}
+.trace .bandlabel{fill:var(--muted); font-size:12px}
+.trace-v{display:none}
+@media (max-width:620px){ .trace-h{display:none} .trace-v{display:block} .name{font-size:2.1rem} }
+@media (prefers-reduced-motion:no-preference){
+  .trace .line{stroke-dasharray:var(--len); stroke-dashoffset:var(--len); animation:draw 1.8s ease-out .2s forwards}
+  .trace .dot,.trace text{opacity:0; animation:show .4s ease-out forwards}
+}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes show{to{opacity:1}}
+.caption{color:var(--muted); font-size:.9rem; margin:0}
+
+/* Sections */
+section{margin-top:3.6rem}
+h2{font-size:1.55rem; line-height:1.35; margin:0 0 1.2rem; font-weight:700}
+p{margin:0 0 1rem}
+.entry{margin:0 0 2rem}
+.entry-head{display:flex; flex-wrap:wrap; justify-content:space-between; gap:.2rem 1rem; align-items:baseline}
+.org{font-weight:700; font-size:1.05rem}
+.when{color:var(--muted); font-size:.92rem; white-space:nowrap}
+.role{color:var(--muted); margin:.1rem 0 .5rem}
+ul{margin:0; padding-left:1.2em}
+li{margin:.3rem 0}
+
+/* Memo block: the one framed element */
+.memo{background:var(--surface); border-left:3px solid var(--accent); padding:1.4rem 1.5rem; margin:0}
+.memo h3{font-size:1.2rem; margin:0 0 .2rem}
+.memo .meta{color:var(--muted); font-size:.92rem; margin:0 0 1rem}
+.memo dl{margin:0}
+.memo dt{font-weight:700; margin-top:.8rem}
+.memo dd{margin:.15rem 0 0}
+.memo .read{display:inline-block; margin-top:1.2rem; font-weight:700}
+
+.facts{display:grid; grid-template-columns:7em 1fr; gap:.5rem 1rem; margin:0}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+@media (max-width:480px){ .facts{grid-template-columns:1fr} .facts dd{margin-bottom:.6rem} }
+
+footer{margin-top:4rem; padding-top:1.4rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.92rem}
+footer p{margin:.3rem 0}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1 class="name serif">Jiayi Shen</h1>
+  <p class="lede">学生物出身，做过三甲医院和医保局的AI落地，现在想用一线视角做医疗与科技投资。</p>
+
+  <svg class="trace trace-h" viewBox="0 0 720 230" role="img" aria-label="个人路径：生物学，2023年股权投资，2025年医院AI落地，2026年医保结算平台，2026年CGM赛道研究">
+    <rect class="band" x="0" y="70" width="720" height="70"/>
+    <text class="bandlabel" x="10" y="88">一直在追的方向：医疗与产业</text>
+    <path class="line" style="--len:900" d="M24 196 C 90 196, 130 120, 196 112 S 300 86, 370 92 S 470 124, 536 108 S 640 84, 696 96"/>
+    <circle class="dot" cx="24" cy="196" r="6" style="animation-delay:.2s"/>
+    <circle class="dot" cx="196" cy="112" r="6" style="animation-delay:.6s"/>
+    <circle class="dot" cx="370" cy="92" r="6" style="animation-delay:1s"/>
+    <circle class="dot" cx="536" cy="108" r="6" style="animation-delay:1.4s"/>
+    <circle class="dot" cx="696" cy="96" r="6" style="animation-delay:1.8s"/>
+    <text x="16" y="222" style="animation-delay:.2s">分子生物学与生物信息</text>
+    <text x="196" y="170" text-anchor="middle" style="animation-delay:.6s">股权投资</text>
+    <text class="yr" x="196" y="188" text-anchor="middle" style="animation-delay:.6s">2023</text>
+    <text x="370" y="48" text-anchor="middle" style="animation-delay:1s">三甲医院AI落地</text>
+    <text class="yr" x="370" y="30" text-anchor="middle" style="animation-delay:1s">2025</text>
+    <text x="536" y="166" text-anchor="middle" style="animation-delay:1.4s">医保结算平台</text>
+    <text class="yr" x="536" y="184" text-anchor="middle" style="animation-delay:1.4s">2026</text>
+    <text x="696" y="48" text-anchor="end" style="animation-delay:1.8s">CGM赛道研究</text>
+    <text class="yr" x="696" y="30" text-anchor="end" style="animation-delay:1.8s">2026</text>
+  </svg>
+
+  <svg class="trace trace-v" viewBox="0 0 360 430" role="img" aria-label="个人路径：生物学，2023年股权投资，2025年医院AI落地，2026年医保结算平台，2026年CGM赛道研究">
+    <rect class="band" x="40" y="0" width="70" height="430"/>
+    <path class="line" style="--len:700" d="M150 24 C 150 70, 80 90, 76 120 S 60 200, 70 210 S 95 280, 84 300 S 66 380, 74 404"/>
+    <circle class="dot" cx="150" cy="24" r="6" style="animation-delay:.2s"/>
+    <circle class="dot" cx="76" cy="120" r="6" style="animation-delay:.6s"/>
+    <circle class="dot" cx="70" cy="210" r="6" style="animation-delay:1s"/>
+    <circle class="dot" cx="84" cy="300" r="6" style="animation-delay:1.4s"/>
+    <circle class="dot" cx="74" cy="404" r="6" style="animation-delay:1.8s"/>
+    <text x="168" y="29" style="animation-delay:.2s">分子生物学与生物信息</text>
+    <text x="130" y="116" style="animation-delay:.6s">股权投资</text>
+    <text class="yr" x="130" y="134" style="animation-delay:.6s">2023</text>
+    <text x="130" y="206" style="animation-delay:1s">三甲医院AI落地</text>
+    <text class="yr" x="130" y="224" style="animation-delay:1s">2025</text>
+    <text x="130" y="296" style="animation-delay:1.4s">医保结算平台</text>
+    <text class="yr" x="130" y="314" style="animation-delay:1.4s">2026</text>
+    <text x="130" y="400" style="animation-delay:1.8s">CGM赛道研究</text>
+    <text class="yr" x="130" y="418" style="animation-delay:1.8s">2026</text>
+  </svg>
+  <p class="caption">线条借用了动态血糖曲线的样子，阴影带是我一直关注的范围。</p>
+</header>
+
+<section aria-labelledby="why">
+  <h2 id="why" class="serif">为什么是投资</h2>
+  <p>本科读分子生物学与生物信息学，先后在蒙特利尔大学、EPFL和西湖大学的实验室做过神经影像、癌症信号通路和结构生物学研究。做下来发现，我对纯生物研究兴趣不大，更关心一项技术怎样进入医疗体系、变成产业，于是开始往投资和咨询方向走。</p>
+  <p>之后两年，我在三甲医院和医保局做AI项目，从医生、医院和支付方的角度看医疗是怎么运转的。这些经验让我在看医疗标的时，能问出更贴近一线的问题。</p>
+</section>
+
+<section aria-labelledby="bio">
+  <h2 id="bio" class="serif">生物研究</h2>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">清华大学、西湖大学 施一公实验室</span><span class="when">2024.06–2024.08</span></div>
+    <p class="role">计算结构生物学</p>
+    <ul>
+      <li>用AlphaFold预测一种新型CDN合成酶的结构并提出功能假设，再设计湿实验去证伪：先预测，后验证</li>
+      <li>独立完成验证闭环：质粒转化、蛋白纯化、冷冻电镜结构分析</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">EPFL 瑞士实验癌症研究所 Constam实验室</span><span class="when">2023.09–2023.12</span></div>
+    <p class="role">癌症信号通路</p>
+    <ul>
+      <li>研究TGFβ信号网络如何调控干细胞自我更新与谱系分化</li>
+      <li>用Western blot、ELISA、transwell及matrigel侵袭实验等方法，分析该信号网络在肿瘤进展中的作用</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">蒙特利尔大学</span><span class="when">2022.03–2022.08</span></div>
+    <p class="role">神经影像与分析流程</p>
+    <ul>
+      <li>搭建高通量生物成像分析流程，用深度学习做二维细胞分割，量化不同声音频率刺激下神经元的形态复杂度</li>
+      <li>设计实验矩阵（频率与暴露时长），用Python完成统计分析</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="invest">
+  <h2 id="invest" class="serif">投资经历</h2>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">洛桑联邦理工学院 瑞士实验癌症研究所（EPFL ISREC）</span><span class="when">2024.03–2024.06</span></div>
+    <p class="role">投资者关系实习｜支持生命科学学院癌症研究项目与投资人、资助方的沟通</p>
+    <ul>
+      <li>把Activin信号通路的基础研究转化为投资人路演材料和项目概述，让非专业受众也能看懂</li>
+      <li>协调投资人会议和活动，为Constam教授、各实验室负责人、ISREC管理层与外部资助方的讨论准备简报</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">常州产业投资集团</span><span class="when">2023.06–2023.09</span></div>
+    <p class="role">股权投资助理｜政府引导基金，生物医药与医疗科技方向</p>
+    <ul>
+      <li>阅读并评估100多份商业计划书，覆盖手术机器人、具身智能、医疗器械、数字医疗等赛道，撰写初筛意见，提炼投资亮点与核心风险；其中6个项目推进至尽调阶段</li>
+      <li>参与撰写新能源电池赛道行业研究报告，负责竞争格局章节</li>
+      <li>参与企业管理层及行业专家访谈并整理纪要，随投资团队实地走访被调研企业</li>
+      <li>结合引导基金返投要求，评估拟投企业在本地落地的可行性</li>
+    </ul>
+  </div>
+
+</section>
+
+<section aria-labelledby="notes">
+  <h2 id="notes" class="serif">研究笔记</h2>
+  <article class="memo">
+    <h3 class="serif">CGM（持续葡萄糖监测）赛道投资备忘录</h3>
+    <p class="meta">2026年10月｜标的：深圳硅基仿生</p>
+    <dl>
+      <dt>结论</dt>
+      <dd>持续跟踪，暂不在当前时点参与；拿到审计收入、估值回到可比区间、专利风险可量化之后再考虑。</dd>
+      <dt>核心判断</dt>
+      <dd>国产CGM的准确度和佩戴天数已经接近，价格战把单价压到百元区间，胜负取决于营销和渠道效率，而不是技术。</dd>
+      <dt>一个容易被忽略的点</dt>
+      <dd>医保要分场景看：医院里做的动态血糖监测在北京、江苏等地属于医保项目，患者自己买回家长期佩戴则基本自费。两条渠道的增长逻辑完全不同。</dd>
+    </dl>
+    <a class="read" href="memo.pdf">阅读完整备忘录（PDF）</a>
+  </article>
+</section>
+
+<section aria-labelledby="ai">
+  <h2 id="ai" class="serif">AI实践</h2>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">常州市第一人民医院</span><span class="when">2025.06–2026.06</span></div>
+    <p class="role">应用AI工程师｜AI导诊与病历生成</p>
+    <ul>
+      <li>搭建基于医院文档的导诊智能体，日均处理约1000次咨询，随着文档覆盖扩大，前台咨询量减少约30%–50%</li>
+      <li>本地部署的病历生成模型，覆盖12个科室60名医生；内科和妇产科约70%的病历无需修改即被采纳</li>
+      <li>在模型外加了一层确定性校验，确保生成内容符合国家病历书写规范</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">常州市医疗保障局</span><span class="when">2026.03至今</span></div>
+    <p class="role">方案设计｜医保结算与处方流转平台（政府侧技术团队）</p>
+    <ul>
+      <li>负责结算与处方流转引擎的架构设计，平台其余模块都依赖这一层</li>
+      <li>发现院外处方配送遇到拒收、退货时缺少冲正路径，设计了补偿交易逻辑</li>
+      <li>在等保三级要求下，参与协商与外部系统的数据共享边界</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">自己做的工具</span></div>
+    <ul>
+      <li>欧盟化妆品出口合规预审工具（进行中）：把欧盟化妆品法规附录整理成结构化数据，设计了80个案例的评测集</li>
+      <li>代码见 <a href="https://github.com/shenjiayi692-maker">GitHub</a></li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="side">
+  <h2 id="side" class="serif">工作之外</h2>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">自建CFA复习网站</span></div>
+    <p class="role">系统学金融知识时顺手做的工具</p>
+    <ul>
+      <li>从题库统计每个考点的出现频率，并对应到具体题目，帮考生按重点结构化复习</li>
+      <li>网站以英文为主，正在通过Reddit推广、收集考生反馈</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head"><span class="org">外贸与选品</span></div>
+    <p class="role">从供应链和市场两端看一个生意</p>
+    <ul>
+      <li>参与经营外贸公司，向美国出口宠物用品，负责选品和供应商开发：判断美国市场要什么，再在国内找到能稳定交付的工厂</li>
+      <li>正在做北美短视频电商选品：用公开数据筛选需求长期存在、正在增长但还不拥挤的品类，再从1688等国内供应链找货；不追爆款，也不用AI虚构产品效果</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="more">
+  <h2 id="more" class="serif">其他</h2>
+  <dl class="facts">
+    <dt>教育</dt>
+    <dd>蒙特利尔大学，分子生物学与生物信息学本科（2024）<br>洛桑联邦理工学院（EPFL），生命科学与应用AI<br>昆山杜克大学，医疗大数据微专业（2021）</dd>
+    <dt>写作</dt>
+    <dd>用中文写科普和商业叙事内容，包括把学术论文讲成大白话的系列</dd>
+    <dt>语言</dt>
+    <dd>中文、英语、法语</dd>
+  </dl>
+</section>
+
+<footer>
+  <p>联系我：<a href="mailto:shenjiayi692@gmail.com">shenjiayi692@gmail.com</a>｜<a href="https://www.linkedin.com/in/shen-jiayi-70a655296">LinkedIn</a></p>
+  <p>2026年10月更新</p>
+</footer>
+
+</main>
+</body>
+</html>
